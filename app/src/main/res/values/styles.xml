@@ -1,0 +1,157 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+    <style name="Theme.Cred" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlNormal">@color/grey_400</item>
+        <item name="colorControlActivated">@color/colorAccent</item>
+        <item name="colorControlHighlight">@color/transparent</item>
+        <item name="android:windowLightStatusBar" tools:targetApi="m">true</item>
+        <item name="android:textColorPrimary">@color/textColorPrimary</item>
+        <item name="android:fontFamily">@font/my_font_family</item>
+        <!-- Dialog theme overlay attribute -->
+        <item name="materialAlertDialogTheme">@style/AppThemeOverlay.Dialog</item>
+
+    </style>
+
+    <style name="Widget.Cred.TextInputLayout" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="hintTextAppearance">@style/TextAppearance.Cred.TextInputLayout.HintText</item>
+        <item name="hintTextColor">@color/textColorPrimary</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="boxStrokeColor">@color/textInputOutlineColor</item>
+        <item name="colorControlNormal">@color/grey_500</item>
+        <item name="colorControlActivated">@color/textColorPrimary</item>
+        <item name="colorControlHighlight">@color/transparent</item>
+    </style>
+
+    <style name="TextAppearance.Cred.TextInputLayout.HintText" parent="TextAppearance.MaterialComponents.Subtitle2">
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Cred.Button" parent="Widget.MaterialComponents.Button">
+        <item name="backgroundTint">?attr/colorPrimaryDark</item>
+        <item name="android:backgroundTintMode">src_in</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+    </style>
+    <style name="Widget.Cred.Button.UnelevatedButton" parent="Widget.MaterialComponents.Button.UnelevatedButton">
+        <item name="backgroundTint">@color/color_states_materialbutton</item>
+        <item name="android:backgroundTintMode">src_in</item>
+        <item name="android:elevation">0dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textColor">@color/white</item>
+    </style>
+    <style name="Widget.Cred.Button.Outline" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="strokeColor">@color/textColorPrimary</item>
+        <item name="strokeWidth">1dp</item>
+        <item name="android:padding">16dp</item>
+        <item name="cornerRadius">10dp</item>
+        <item name="android:textAllCaps">false</item>
+    </style>
+
+
+
+    <style name="Widget.Cred.Button.TextButton" parent="Widget.MaterialComponents.Button.TextButton">
+        <item name="android:textColor">@color/color_states_materialbutton</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="iconTint">@color/color_states_materialbutton</item>
+    </style>
+
+    <style name="Widget.Cred.Toolbar" parent="Widget.AppCompat.Toolbar">
+        <item name="android:background">?attr/colorPrimary</item>
+        <item name="android:theme">@style/Theme.Cred</item>
+        <item name="popupTheme">@style/ThemeOverlay.AppCompat.Light</item>
+        <item name="titleTextAppearance">@style/TextAppearance.Cred.Toolbar</item>
+
+    </style>
+
+    <style name="TextAppearance.Cred.Toolbar" parent="TextAppearance.MaterialComponents.Button">
+        <item name="android:textSize">16sp</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:textAlignment">center</item>
+    </style>
+
+    <style name="TextAppearance.Cred.Title" parent="TextAppearance.MaterialComponents.Headline4">
+        <item name="textAllCaps">true</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="Widget.Cred.Backdrop" parent="">
+        <item name="android:background">?attr/colorPrimary</item>
+    </style>
+
+
+    <style name="Theme.Cred.Dialog" parent="@style/Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:backgroundDimEnabled">true</item>
+        <item name="android:clickable">true</item>
+        <item name="android:textViewStyle">@style/Widget.Cred.TextView</item>
+    </style>
+    ------------------------------------------------------------------
+    <style name="Widget.Cred.TextView" parent="@android:style/Widget.Material.TextView">
+        <item name="android:textAppearance">@style/TextAppearance.Cred.Body</item>
+        <item name="android:lineSpacingMultiplier">1.5</item>
+    </style>
+    ------------------------------------------------------------------
+    <style name="TextAppearance.Cred.Body" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textColor">?android:textColorSecondary</item>
+    </style>
+
+    <style name="AppThemeOverlay.Dialog" parent="ThemeOverlay.MaterialComponents.MaterialAlertDialog">
+        <item name="alertDialogStyle">@style/AppMaterialAlertDialog</item>
+        <item name="materialAlertDialogBodyTextStyle">@style/AppTextAppearance.MaterialAlertDialog.Body</item>
+        <item name="buttonBarNegativeButtonStyle">@style/Widget.Cred.BorderlessButton</item>
+        <item name="buttonBarPositiveButtonStyle">@style/Widget.Cred.RaisedButton</item>
+    </style>
+
+    <style name="AppMaterialAlertDialog" parent="MaterialAlertDialog.MaterialComponents">
+        <item name="shapeAppearance">?attr/shapeAppearanceMediumComponent</item>
+    </style>
+
+    <style name="AppTextAppearance.MaterialAlertDialog.Body" parent="MaterialAlertDialog.MaterialComponents.Body.Text">
+        <!-- Add MaterialAlertDialog body text attrs here -->
+    </style>
+
+    <style name="Widget.Cred.BorderlessButton" parent="@style/Widget.MaterialComponents.Button.TextButton">
+        <item name="android:fontFamily">@font/my_font_family</item>
+        <item name="android:textColor">@color/textColorPrimary</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">10dp</item>
+        <item name="android:paddingBottom">10dp</item>
+    </style>
+
+    <style name="Widget.Cred.RaisedButton" parent="@style/Widget.AppCompat.Button.Colored">
+        <item name="android:fontFamily">@font/my_font_family</item>
+        <item name="android:background">@color/textColorPrimary</item>
+        <item name="android:backgroundTint">@color/textColorPrimary</item>
+        <item name="android:letterSpacing">0.025</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:paddingTop">6dp</item>
+        <item name="android:paddingBottom">6dp</item>
+    </style>
+
+
+
+</resources>
